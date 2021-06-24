@@ -71,40 +71,60 @@ public class chat_client extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        msg_area.setBackground(new java.awt.Color(51, 255, 0));
         msg_area.setColumns(20);
         msg_area.setRows(5);
+        msg_area.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jScrollPane1.setViewportView(msg_area);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel1.setText("       IP :");
 
+        ip_address.setBackground(new java.awt.Color(0, 255, 51));
+        ip_address.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        ip_address.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        connect.setBackground(new java.awt.Color(51, 255, 255));
         connect.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         connect.setText("Connect");
+        connect.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 153, 153)));
+        connect.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         connect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 connectActionPerformed(evt);
             }
         });
 
-        jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jToggleButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jToggleButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 255));
         jToggleButton1.setText("Server's File");
-        jToggleButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jToggleButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jToggleButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
 
-        filechooser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        filechooser.setBackground(new java.awt.Color(0, 153, 153));
+        filechooser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        filechooser.setForeground(new java.awt.Color(255, 255, 255));
         filechooser.setText("Choose File to upload");
+        filechooser.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        filechooser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         filechooser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 filechooserActionPerformed(evt);
             }
         });
 
-        uploadFile.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        uploadFile.setBackground(new java.awt.Color(0, 153, 153));
+        uploadFile.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        uploadFile.setForeground(new java.awt.Color(255, 255, 255));
         uploadFile.setText("Upload File in the Server");
+        uploadFile.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        uploadFile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         uploadFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uploadFileActionPerformed(evt);
@@ -113,6 +133,10 @@ public class chat_client extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setText("  PORT :");
+
+        portNumber.setBackground(new java.awt.Color(0, 255, 51));
+        portNumber.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        portNumber.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,44 +149,47 @@ public class chat_client extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(filechooser)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(uploadFile)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jToggleButton1))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(portNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(connect, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(ip_address, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 4, Short.MAX_VALUE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(ip_address, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                                    .addComponent(portNumber))
+                                .addGap(18, 18, 18)
+                                .addComponent(connect, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(filechooser, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(uploadFile, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(ip_address)
+                                .addGap(2, 2, 2)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ip_address, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(portNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(portNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(connect, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(8, 8, 8)
+                        .addComponent(connect, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(filechooser, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(filechooser, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
                     .addComponent(uploadFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jToggleButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -180,12 +207,16 @@ public class chat_client extends javax.swing.JFrame {
             String StringPort = portNumber.getText().trim();
             if (!IP.isEmpty() && !StringPort.isEmpty()) {
                 int PORT = Integer.parseInt(StringPort);
-                System.out.println(IP + " " + PORT);
                 s = new Socket(IP, PORT);
                 dis = new DataInputStream(s.getInputStream());
                 dout = new DataOutputStream(s.getOutputStream());
                 connected = true;
                 connect.hide();
+                ip_address.setText("");
+                portNumber.setText("");
+                msg_area.setText("\nConnected!");
+                ip_address.setEnabled(false);
+                portNumber.setEnabled(false);
             } else {
                 JOptionPane.showMessageDialog(null, "Please Provide IP Address and Port number ", "Alert", JOptionPane.WARNING_MESSAGE);
                 connected = false;
@@ -199,52 +230,20 @@ public class chat_client extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         if (connected) {
-            try {
-                // TODO add your handling code here:
-                dout.writeUTF("files-on-server");
-                myFiles.clear();
-                String templistofFiles = dis.readUTF();
-                int listofFiles = Integer.parseInt(templistofFiles);
-                System.out.println("Server File " + listofFiles);
-                for (int i = 0; i < listofFiles; i++) {
-                    int fileNameLength = dis.readInt();
-                    //System.out.println("fileNameLength " + fileNameLength);
-                    if (fileNameLength > 0) {
-                        byte[] fileNameBytes = new byte[fileNameLength];
-                        dis.readFully(fileNameBytes, 0, fileNameBytes.length);
-                        String fileName = new String(fileNameBytes);
-                        int fileContentLength = dis.readInt();
-                        byte[] fileContentBytes = null;
-                        if (fileContentLength > 0) {
-                            fileContentBytes = new byte[fileContentLength];
-                            dis.readFully(fileContentBytes, 0, fileContentBytes.length);
-                        }
-                        MyFile myfile = new MyFile(i, fileName, fileContentBytes, getFileExtension(fileName));
-                        myFiles.add(myfile);
-                        //System.out.println(myfile.getId() + " " + myfile.getName() + " " + myfile.getData() + " " + myfile.getFileExtension());
-                    }
-                }
-
-                //serversFile.setVisible(true);
-            } catch (IOException ex) {
-                Logger.getLogger(chat_client.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            ServersAllFile();
             new ServersFile(myFiles, dout, dis).setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Please established your socket connection !", "Alert", JOptionPane.WARNING_MESSAGE);
         }
-
-
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void filechooserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filechooserActionPerformed
-        // TODO add your handling code here:
         if (connected) {
             JFileChooser jFileChooser = new JFileChooser();
             jFileChooser.setDialogTitle("Choose a file to send.");
             if (jFileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
                 fileToSend[0] = jFileChooser.getSelectedFile();
-                msg_area.setText("The file you want to send is: " + fileToSend[0].getName());
+                msg_area.append("The file you want to send is: " + fileToSend[0].getName());
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please established your socket connection !", "Alert", JOptionPane.WARNING_MESSAGE);
@@ -252,17 +251,16 @@ public class chat_client extends javax.swing.JFrame {
     }//GEN-LAST:event_filechooserActionPerformed
 
     private void uploadFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadFileActionPerformed
-        // TODO add your handling code here:
+
         if (connected) {
             if (fileToSend[0] == null) {
-                msg_area.setText("\nPlease choose a file to send first!");
+                msg_area.append("\nPlease choose a file to send first!");
                 JOptionPane.showMessageDialog(null, "Please choose a file to send first!", "Alert", JOptionPane.WARNING_MESSAGE);
             } else {
                 try {
                     fin = new FileInputStream(fileToSend[0]);
                     String fileName = fileToSend[0].getName();
                     dout.writeUTF(fileName);
-                    System.out.println(fileName);
                     int ch;
                     do {
                         ch = fin.read();
@@ -291,14 +289,6 @@ public class chat_client extends javax.swing.JFrame {
                 new chat_client().setVisible(true);
             }
         });
-
-        try {
-            String msgin = "";
-
-        } catch (Exception e) {
-            //handle the exception here
-        }
-
     }
 
     public static String getFileExtension(String fileName) {
@@ -324,4 +314,33 @@ public class chat_client extends javax.swing.JFrame {
     private javax.swing.JTextField portNumber;
     private javax.swing.JButton uploadFile;
     // End of variables declaration//GEN-END:variables
+
+    private void ServersAllFile() {
+        try {
+            dout.writeUTF("files-on-server");
+            myFiles.clear();
+            String templistofFiles = dis.readUTF();
+            int listofFiles = Integer.parseInt(templistofFiles);
+            for (int i = 0; i < listofFiles; i++) {
+                int fileNameLength = dis.readInt();
+                if (fileNameLength > 0) {
+                    byte[] fileNameBytes = new byte[fileNameLength];
+                    dis.readFully(fileNameBytes, 0, fileNameBytes.length);
+                    String fileName = new String(fileNameBytes);
+                    int fileContentLength = dis.readInt();
+                    byte[] fileContentBytes = null;
+                    if (fileContentLength > 0) {
+                        fileContentBytes = new byte[fileContentLength];
+                        dis.readFully(fileContentBytes, 0, fileContentBytes.length);
+                    }
+                    MyFile myfile = new MyFile(i, fileName, fileContentBytes, getFileExtension(fileName));
+                    myFiles.add(myfile);
+                    //System.out.println(myfile.getId() + " " + myfile.getName() + " " + myfile.getData() + " " + myfile.getFileExtension());
+                }
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(chat_client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
